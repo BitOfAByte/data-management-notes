@@ -1,0 +1,18 @@
+TableName1(PK Column1, Column2, Column3)
+TableName2(PK Column1, Column2, FK Column3)
+
+TableName1.Column1 -> TableName2.Column3
+TableName1.Column1 -> TableName3.Column2
+-----------------------------------------
+
+Employee(PK EmployeeId, FirstName, LastName, FK DepartmentId)
+Department(PK DepartmentId, Code, Name)
+TimeOnProject(Pk TimeOnProjectId, Time, FK EmployeeId, FK ProjectId)
+Project(PK ProjectId, ProjectNumber)
+
+EmployeeId -> TimeOnProject.EmployeeId
+ProjectId -> TimeOnProject.ProjectId
+DepartmentId -> Employee.DepartmentId
+
+-----------------------------------------
+SomeTable(PK(FK MyId, FK HerId), Amount)
